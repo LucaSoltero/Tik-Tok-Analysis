@@ -1,1 +1,2 @@
-A multiple regression analysis of Tik Tok Engagement as a function of duration and a few other dummy variables. Hoping to gain a further understanding of the determinants of Tik Tok Engagement. Data extracted from the following Kaggle data set: https://www.kaggle.com/datasets/erikvdven/tiktok-trending-december-2020?select=trending.json
+See Paper: https://docs.google.com/document/d/1MdjHd0JWE3hCAzMUB7fLcwVB814eUp0bqZRUUE6BTGY/edit?usp=sharing
+See Presentation Slides: https://docs.google.com/presentation/d/1kq6iUcYWDCViWuXx_CRBDoTobtPq1JWbZjPDjV_RKnk/edit?usp=sharing
