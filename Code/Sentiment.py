@@ -25,7 +25,7 @@ def get_Sentiment(caption):
         frequency_penalty=0.5,
         presence_penalty=0.0
     )
-    print(response)
+    # print(response)
     sent = response["choices"][0]["text"].strip()
     if sent == "Positive":
         return "Positive"
