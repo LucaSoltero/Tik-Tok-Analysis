@@ -4,10 +4,11 @@
 
 import Analysis
 from matplotlib import pyplot as plt
+import statsmodels.formula.api as sm
 
 
-def join_strings(coefs):
-    joined = ' + '.join(coefs)
+def join_strings(*args):
+    joined = ' + '.join(args)
     return joined
 
 
@@ -19,9 +20,10 @@ class Graph:
     def __init__(self, y, *args):
         self.y = y
         self.args = args
+        self.model = sm.ols(formula=f'{y} ~  + {join_strings(*args)}', data=df).fit()
 
-    # def getSummary(self):
-    # print(self.model.summary())
+    def getSummary(self):
+        print(self.model.summary())
 
     def graphB1(self, title, groupBy):
         fig, ax = plt.subplots()
@@ -63,8 +65,8 @@ class Graph:
 
 
 def main():
-    g = Graph("engagement", "duration")
-    g.graphB1("After Log Transformation", "isVerified")
+    g = Graph("engagement", "duration", "isOrigSound", "isPositive", "containsFyp", "isVerified")
+    g.graphB1("Test", "isPositive")
 
 
 if __name__ == '__main__':
